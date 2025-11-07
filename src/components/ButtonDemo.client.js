@@ -92,8 +92,8 @@ const trackABTest = (variant) => {
   
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="flex gap-4">
+    <div className="flex flex-col items-center gap-6" >
+      <div className="flex gap-4" style={{marginTop:'10px', display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-around'}}>
         <button
           onClick={() => handleClick('create')}
           disabled={loadingCreate}
@@ -112,18 +112,10 @@ const trackABTest = (variant) => {
       </div>
 
       {/* --- A/B Testing Buttons --- */}
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center" style={{marginTop:'10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-around'}}>
         <h2 className="text-lg font-semibold mb-4">¿Qué botón te llama más la atención?</h2>
 
-        <div className="flex gap-6 justify-center">
-          {/* Feo */}
-          <button
-           onClick={() => trackABTest("ugly")}
-            className="px-4 py-2 bg-gray-600 text-white border border-gray-400 rounded-md"
-          >
-            Botón Feo
-          </button>
-
+        <div className="flex gap-6 justify-center" style={{marginTop:'10px', display:'flex', flexDirection:'row', alignItems:'center'}}>
           {/* Bonito */}
           <button
             onClick={() => trackABTest("pretty")}
@@ -132,11 +124,30 @@ const trackABTest = (variant) => {
               background: "linear-gradient(180deg, #2F76F7 0%, #479DFD 100%)",
               borderRadius: "6.2px",
               boxShadow: "0px 4px 10px rgba(47, 118, 247, 0.4)",
+              color:'#fff',
+              padding:'10px 20px', 
+              fontSize:'16px',
+              cursor:'pointer',
+              border:'none',
+              '&:hover':{
+                background:'#2F76F7',
+                color:'#fff',
+                boxShadow:'0px 4px 10px rgba(47, 118, 247, 0.4)',fontSize:'20px',
+              }
             }}
           >
-            ✨ Botón Bonito ✨
-          </button>
+            Fiesta 🎉
+          </button> 
+         
+         
         </div>
+         <div className="flex gap-6 justify-center" style={{marginTop:'10px', display:'flex', flexDirection:'row', alignItems:'center'}}> {/* Feo */}
+          <button
+           onClick={() => trackABTest("ugly")}
+            className="px-4 py-2 bg-gray-600 text-white border border-gray-400 rounded-md" style={{marginTop:'20px'}}
+          >
+            Botón
+          </button></div>
       </div>
     </div>
   );

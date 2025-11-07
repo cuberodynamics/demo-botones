@@ -21,7 +21,7 @@ export default function AnalyticsPage() {
   }, [setCreateClicks, setResultsClicks]);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-8 bg-gray-900 text-white p-6">
+    <main className="min-h-screen flex flex-col items-center justify-center gap-8 bg-gray-900 text-red p-6">
       <h1 className="text-2xl font-bold">Panel de Métricas (Demo)</h1>
 
       <div className="grid grid-cols-2 gap-6">
