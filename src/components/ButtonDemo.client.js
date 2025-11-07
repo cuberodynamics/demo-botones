@@ -103,6 +103,15 @@ const trackABTest = (variant) => {
         </button>
 
         <button
+          onClick={() => alert('⚠️ Error: La petición ha fallado')}
+          className="btn"
+          style={{ backgroundColor: '#FF4D4F' }} // rojo para diferenciar
+        >
+          Simular error
+        </button>
+
+
+        <button
           onClick={() => handleClick('results')}
           disabled={loadingResults}
           className="btn"
